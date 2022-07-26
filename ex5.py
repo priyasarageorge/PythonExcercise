@@ -21,7 +21,7 @@ def line_from_points(point1, point2) -> tuple[list, float] | None:
     # Case where slope of line segment is not perpendicular to y-axis
     elif b != 0:
         slope_of_line_segment = a / b
-        c = point1[1] - (slope_of_line_segment * P[0])
+        c = point1[1] - (slope_of_line_segment * point1[0])
         slope_of_line_from_origin = math.tan(math.radians(direction))
         x_intercept = round(c / (slope_of_line_from_origin - slope_of_line_segment), 2)
         y_intercept = round(slope_of_line_segment * x_intercept + c, 2)
